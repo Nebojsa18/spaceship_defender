@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 420902}
   - component: {fileID: 21296622}
   - component: {fileID: 9509168}
+  - component: {fileID: 9091079131539433218}
   m_Layer: 0
   m_Name: spaceship_2
   m_TagString: Untagged
@@ -106,3 +107,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9091079131539433218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7ed0825fbb0d54eb11927db6fa00d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyProjectile: {fileID: 6809085353731491338, guid: b43813d1da25b344c82e8249c1b4a8b5,
+    type: 3}
