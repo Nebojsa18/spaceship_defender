@@ -16,7 +16,10 @@ public class PlayerLives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(lives == 0)
+        {
+           
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

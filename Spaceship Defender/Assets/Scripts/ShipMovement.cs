@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour
 {
     public float moveSpeed;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class ShipMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
