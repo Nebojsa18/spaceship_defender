@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  enemyShips:
+  - {fileID: 0}
 --- !u!61 &-8150759263657224871
 BoxCollider2D:
   m_ObjectHideFlags: 0

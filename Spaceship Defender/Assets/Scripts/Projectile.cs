@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Projectile : MonoBehaviour
 {
     public float moveSpeed;
     public GameObject explosionPrefab;
     private PointManager pointManager;
+
+    public static int enemyShips = 8;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +29,10 @@ public class Projectile : MonoBehaviour
             Destroy(collision.gameObject);
             pointManager.UpdateScore(50);
             Destroy(gameObject);
-
+            enemyShips--;
+            if(enemyShips==0){
+                SceneManager.LoadScene("Winner");
+            }
         }
 
         if(collision.gameObject.tag =="Border"){

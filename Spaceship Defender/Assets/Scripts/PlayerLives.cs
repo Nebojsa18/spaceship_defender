@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerLives : MonoBehaviour
 {
     public int lives = 3;
+    
+    
     public Image[] livesUI;
     public GameObject explosionPrefab;
     // Start is called before the first frame update
@@ -16,10 +19,7 @@ public class PlayerLives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(lives == 0)
-        {
-           
-        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,6 +42,7 @@ public class PlayerLives : MonoBehaviour
             if(lives <= 0)
             {
                 Destroy(gameObject);
+                GameOver();
             }
         }
     }
@@ -65,8 +66,13 @@ public class PlayerLives : MonoBehaviour
             if(lives <= 0)
             {
                 Destroy(gameObject);
+                GameOver();
             }
         }
+    }
+
+    public void GameOver(){
+        SceneManager.LoadScene("GameOver");
     }
 
 }

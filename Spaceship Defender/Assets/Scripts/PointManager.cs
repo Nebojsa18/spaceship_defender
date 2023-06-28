@@ -6,7 +6,7 @@ using TMPro;
 public class PointManager : MonoBehaviour
 {
 
-    public int score;
+    public static int score;
     public TMP_Text scoreText;
 
     // Start is called before the first frame update
