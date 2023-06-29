@@ -10,22 +10,14 @@ public class PlayerLives : MonoBehaviour
     
     public Image[] livesUI;
     public GameObject explosionPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioSource audioExplosion;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.tag == "Enemy")
         {
+            audioExplosion.Play();
             Destroy(collision.collider.gameObject);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             lives -= 1;
@@ -50,6 +42,7 @@ public class PlayerLives : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Enemy Projectile")
         {
+            audioExplosion.Play();
             Destroy(collision.gameObject);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             lives -= 1;

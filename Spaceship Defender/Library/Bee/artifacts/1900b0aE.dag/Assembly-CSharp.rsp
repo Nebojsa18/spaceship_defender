@@ -340,6 +340,7 @@
 "Assets/Scripts/ProjectileSpawner.cs"
 "Assets/Scripts/RetryGame.cs"
 "Assets/Scripts/ShipMovement.cs"
+"Assets/Scripts/StartGame.cs"
 -langversion:9.0
 
 /deterministic

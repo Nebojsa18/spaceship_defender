@@ -5,12 +5,7 @@ using UnityEngine;
 public class ProjectileShoot : MonoBehaviour
 {
     public GameObject projectilePrefab;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -19,6 +14,8 @@ public class ProjectileShoot : MonoBehaviour
             Instantiate(projectilePrefab, transform.position,  Quaternion.Euler(0,0,180f));
         }
     }
+
+
 
     
 }

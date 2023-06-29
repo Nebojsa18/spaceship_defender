@@ -7,18 +7,7 @@ public class RetryGame : MonoBehaviour
 {
     public int points=0;
     public TMP_Text scoreText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Setup();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+   
     void Setup(){
         points = PointManager.score;
         scoreText.text = points + " POINTS";
