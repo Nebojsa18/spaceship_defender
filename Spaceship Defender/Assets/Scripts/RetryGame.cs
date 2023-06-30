@@ -15,6 +15,7 @@ public class RetryGame : MonoBehaviour
     void LoadGame(){
         SceneManager.LoadScene("Game");
         PointManager.score=0;
+        Projectile.enemyShips =8;
     }
 
 }
